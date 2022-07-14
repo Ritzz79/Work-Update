@@ -1,0 +1,142 @@
+{
+  "lang":"en",
+  "name":"pipeline",
+  "version":"0.0.0",
+  "spacy_version":">=3.3.1,<3.4.0",
+  "description":"",
+  "author":"",
+  "email":"",
+  "url":"",
+  "license":"",
+  "spacy_git_version":"Unknown",
+  "vectors":{
+    "width":0,
+    "vectors":0,
+    "keys":0,
+    "name":null,
+    "mode":"default"
+  },
+  "labels":{
+    "tok2vec":[
+
+    ],
+    "ner":[
+      "ADDRESS OF EMPLOYEE",
+      "ADDRESS OF EMPLOYER",
+      "AGGREGATE",
+      "ASSESSMENT YEAR",
+      "CERTIFICATE NUMBER",
+      "DEDUCTER PAN NUMBER",
+      "DEDUCTER TAN NUMBER",
+      "GROSS SALARY",
+      "LAST UPDATED",
+      "NAME OF EMPLOYEE",
+      "NAME OF EMPLOYER",
+      "NET SALARY",
+      "PAN NUMBER",
+      "PERIOD WITH EMPLOYER",
+      "QUARTER",
+      "TOTAL TAX PAYABLE"
+    ]
+  },
+  "pipeline":[
+    "tok2vec",
+    "ner"
+  ],
+  "components":[
+    "tok2vec",
+    "ner"
+  ],
+  "disabled":[
+
+  ],
+  "performance":{
+    "ents_f":0.5106382979,
+    "ents_p":0.6486486486,
+    "ents_r":0.4210526316,
+    "ents_per_type":{
+      "CERTIFICATE NUMBER":{
+        "p":1.0,
+        "r":0.75,
+        "f":0.8571428571
+      },
+      "LAST UPDATED":{
+        "p":1.0,
+        "r":1.0,
+        "f":1.0
+      },
+      "NAME OF EMPLOYER":{
+        "p":0.6666666667,
+        "r":0.5,
+        "f":0.5714285714
+      },
+      "ADDRESS OF EMPLOYER":{
+        "p":0.1428571429,
+        "r":0.1111111111,
+        "f":0.125
+      },
+      "TOTAL TAX PAYABLE":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      },
+      "ASSESSMENT YEAR":{
+        "p":1.0,
+        "r":1.0,
+        "f":1.0
+      },
+      "PERIOD WITH EMPLOYER":{
+        "p":1.0,
+        "r":1.0,
+        "f":1.0
+      },
+      "NAME OF EMPLOYEE":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      },
+      "AGGREGATE":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      },
+      "ADDRESS OF EMPLOYEE":{
+        "p":0.5,
+        "r":0.1666666667,
+        "f":0.25
+      },
+      "DEDUCTER PAN NUMBER":{
+        "p":1.0,
+        "r":0.6666666667,
+        "f":0.8
+      },
+      "PAN NUMBER":{
+        "p":1.0,
+        "r":0.5,
+        "f":0.6666666667
+      },
+      "NET SALARY":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      },
+      "DEDUCTER TAN NUMBER":{
+        "p":1.0,
+        "r":0.5,
+        "f":0.6666666667
+      },
+      "QUARTER":{
+        "p":1.0,
+        "r":0.6666666667,
+        "f":0.8
+      },
+      "GROSS SALARY":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      }
+    },
+    "tok2vec_loss":302.3269216951,
+    "ner_loss":332.5448758037
+  }
+}
