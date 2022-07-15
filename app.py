@@ -45,7 +45,7 @@ def upload_file():
                     for tex in text:
                         line=line+' '+tex
 
-            elif filename[-3:]=='jpg' or filename[-3:]=='JPG':    
+            elif filename[-3:]=='jpg' or filename[-3:]=='JPG' or filename[-3:]=='png' or filename[-3:]=='PNG':    
                 line=''
                 text = reader.readtext(os.path.join(app.config['UPLOAD_FOLDER'], filename),detail=0)
                 for tex in text:
