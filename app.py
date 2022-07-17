@@ -2,6 +2,7 @@ import os
 import easyocr
 import json
 import spacy
+import PyPDF2
 from pdf2image import convert_from_path
 import numpy as np
 from werkzeug.utils import secure_filename
@@ -36,14 +37,22 @@ def upload_file():
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             print("saved file successfully")
             if filename[-3:]=='pdf' or filename[-3:]=='PDF':
-                images = convert_from_path(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-                #print(images)
-                line=''
-                for j in range(len(images)):
-                    #print(images[j])
-                    text = reader.readtext(np.array(images[j]),detail=0)
-                    for tex in text:
-                        line=line+' '+tex
+                pdfFileObj = open(os.path.join(app.config['UPLOAD_FOLDER'], filename), 'rb') 
+    
+                # creating a pdf reader object 
+                pdfReader = PyPDF2.PdfFileReader(pdfFileObj) 
+                    
+                # printing number of pages in pdf file 
+                print(pdfReader.numPages) 
+                    
+                # creating a page object 
+                pageObj = pdfReader.getPage(0) 
+                    
+                # extracting text from page 
+                line= pageObj.extractText()
+                print(line)
+                # closing the pdf file object 
+                pdfFileObj.close() 
 
             elif filename[-3:]=='jpg' or filename[-3:]=='JPG' or filename[-3:]=='png' or filename[-3:]=='PNG':    
                 line=''
