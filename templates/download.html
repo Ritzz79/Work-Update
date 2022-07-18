@@ -1,8 +1,48 @@
 <!doctype html>
-  <title>Download File</title>
-  <h1>Download File</h1>
-  <body class="body">
-     <div class="container" align="left">
-      <a href="/return-files/{{value}}" target="blank"><button class='btn btn-default'>Download</button></a>
+<html lang="en">
+<head>
+  <title>Download new File</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta charset="UTF-8">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+*{
+    padding: 0; margin: 0; box-sizing: border-box;
+}
+body{
+    font-family: 'Lato',sans-serif; padding: 30px; 
+}
+
+.text-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.custom-file{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+button{
+   border: none;
+   cursor: pointer;
+   background: #ed1c24;
+   display: inline-block;
+   color: #fff;
+   padding: 14px 40px;
+   text-align: center;
+}
+</style>
+</head>
+<body >
+   <h1 class="text-center">Download File</h1>
+
+     <div class="custom-file">
+      <a href="/return-files/{{value}}" target="blank">
+         <button>Download</button>
+      </a>
      </div>
-  </body>
+     <script src="js/jquery-latest.min.js"></script>
+   </body>
+</html>
