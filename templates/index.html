@@ -1,8 +1,76 @@
 <!doctype html>
-    <title>Upload new File</title>
-    <h1>Upload new File</h1>
-    <form action="" method=post enctype=multipart/form-data>
-      <p><input type=file name=file>
-         <input type=submit value=Upload>
-    </form>
+<html lang="en">
+<head>
+  <title>Upload new File</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+*{
+    padding: 0; margin: 0; box-sizing: border-box;
+}
+body{
+    font-family: 'Lato',sans-serif; padding: 30px; 
+}
+
+.text-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.custom-file-wrp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.custom-file input[type="file"]{
+  display:none;
+}
+.custom-file label{
+  cursor: pointer;
+  background: #ed1c24;
+  display: inline-block;
+  color: #fff;
+  padding: 14px 40px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.custom-file1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom-file1 input[type="submit"]{
+  display: none;
+}
+.custom-file1 label{
+  cursor: pointer;
+  background: #ed1c24;
+  display: inline-block;
+  color: #fff;
+  padding: 14px 40px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+ 
+    <h1 class="text-center">Upload new File</h1>
+    <div class="custom-file-wrp">
+      <form action="" method=post enctype=multipart/form-data >
+        <div class="custom-file">        
+          <label for="fileuchoose" >Choose File</label>
+          <input type="file" name="file" id="fileuchoose">
+        </div>
+        <div class="custom-file1">  
+          <label for="fileupload">Upload</label>
+          <input type=submit id="fileupload"> 
+        </div>
+      </form>
+    </div>
     
+  
+<script src="js/jquery-latest.min.js"></script>
+</body>
+</html>
