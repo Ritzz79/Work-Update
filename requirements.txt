@@ -1,0 +1,7 @@
+Flask
+PyPDF2
+opencv-python-headless==4.1.2.30
+easyocr
+poppler-utils
+pdf2image
+pdfminer.six
